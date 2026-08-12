@@ -1,4 +1,47 @@
+# OS files
 .DS_Store
 Thumbs.db
-*.log
+Desktop.ini
 
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.local
+*.local.*
+
+# Local content, drafts, and source materials
+/content/
+/contents/
+/local/
+/.local/
+/private/
+/work/
+/drafts/
+/素材/
+/草稿/
+/本地内容/
+/内容/
+
+# Generated deliverables and temporary work
+/output/
+/outputs/
+/产出/
+/tmp/
+/temp/
+/cache/
+/缓存/
+*.tmp
+*.bak
+*.swp
+
+# Build and tool artifacts
+/build/
+/dist/
+coverage/
+.cache/
+.pytest_cache/
+node_modules/
+
+# Logs
+*.log

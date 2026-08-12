@@ -1,4 +1,4 @@
 interface:
-  display_name: "Dylan 内容工作台"
+  display_name: "dylan-content"
   short_description: "将抖音和小红书选题文稿加工成可发布内容包与复盘建议"
   default_prompt: "Use $dylan-content to turn my topic or draft into a publishable content package for Douyin or Xiaohongshu."

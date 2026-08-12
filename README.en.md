@@ -8,6 +8,15 @@
   <a href="README.md">中文版 README</a>
 </p>
 
+<p align="center">
+  <a href="https://www.xiaohongshu.com/user/profile/5df3742d000000000100212"><img src="readme-assets/xiaohongshu.svg" alt="Xiaohongshu" width="40" height="40"></a>&nbsp;&nbsp;
+  <a href="https://www.douyin.com/user/MS4wLjABAAAAHH81Iv6MWugNS03rPOnWulSnhRbM26Ud_S16rlgqOfY4nR8bznDSWbFIcviihJJm"><img src="readme-assets/douyin.svg" alt="Douyin" width="40" height="40"></a>&nbsp;&nbsp;
+  <a href="https://x.com/xDylanLong"><img src="readme-assets/x.svg" alt="X / Twitter" width="40" height="40"></a>
+</p>
+<p align="center">
+  <a href="https://looda.cc">Personal website</a>
+</p>
+
 ---
 
 ## What problem does it solve?

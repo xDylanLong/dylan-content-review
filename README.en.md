@@ -1,8 +1,8 @@
-# Dylan Content Workbench
+# Dylan Content Review
 
-> A Chinese-content Skill for Douyin and Xiaohongshu that turns topic, title, hook, script, resonance, and AI-expression checks into an executable workflow.
+> A Chinese-content Skill for diagnosing and improving topics, titles, hooks, scripts, resonance, and AI-expression signals.
 >
-> Chinese content diagnosis · Short-video scripts · Xiaohongshu titles · Content review · Codex Skill
+> Chinese content review · Draft improvement · Short-video scripts · Xiaohongshu titles · Codex Skill
 
 <p align="center">
   <a href="README.md">中文版 README</a>
@@ -23,7 +23,7 @@
 
 Content editing often stops at “try another title” or “make the sentences smoother.” It still leaves the important questions unanswered: which format fits the material, why the audience should keep watching, whether the ideas actually connect, and which parts only look complete because they sound machine-written.
 
-`dylan-content` breaks those decisions into six focused modules. It uses the user’s original wording, facts, and materials as evidence, then returns concrete edit locations, replacement lines, content structures, or next actions. It does not promise completion rate, click-through rate, distribution, or virality.
+`dylan-content-review` breaks those decisions into six focused modules. It uses the user’s original wording, facts, and materials as evidence, then returns concrete edit locations, replacement lines, content structures, or next actions. It does not promise completion rate, click-through rate, distribution, or virality, and it does not generate a full draft unless requested.
 
 ## Six content modules
 
@@ -43,10 +43,10 @@ For a complete short-video script, the default combination is `01`, `02`, `04`, 
 ### Install into Codex
 
 ```bash
-git clone https://github.com/xDylanLong/dylan-content.git
-cd dylan-content
+git clone https://github.com/xDylanLong/dylan-content-review.git
+cd dylan-content-review
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R . "${CODEX_HOME:-$HOME/.codex}/skills/dylan-content"
+cp -R . "${CODEX_HOME:-$HOME/.codex}/skills/dylan-content-review"
 ```
 
 Windows PowerShell:
@@ -54,23 +54,23 @@ Windows PowerShell:
 ```powershell
 $skillRoot = if ($env:CODEX_HOME) { Join-Path $env:CODEX_HOME "skills" } else { Join-Path $HOME ".codex/skills" }
 New-Item -ItemType Directory -Force -Path $skillRoot | Out-Null
-Copy-Item -Recurse -Force . (Join-Path $skillRoot "dylan-content")
+Copy-Item -Recurse -Force . (Join-Path $skillRoot "dylan-content-review")
 ```
 
 Then call it in Codex:
 
 ```text
-Use $dylan-content to diagnose this Douyin short-video script and give me a directly usable revision.
+Use $dylan-content-review to diagnose this Douyin short-video script and give me a directly usable revision.
 ```
 
 ### Local development binding
 
-The local source directory for this project is `/Users/thawingx/Documents/dylan-content`. The current Codex runtime directory, `/Users/thawingx/.codex/skills/dylan-content`, is bound to that source directory. Changes made in the source directory are therefore visible to the runtime Skill immediately.
+The local source directory for this project is `/Users/thawingx/Documents/dylan-content-review`. The current Codex runtime directory, `/Users/thawingx/.codex/skills/dylan-content-review`, is maintained separately and must be synchronized after source changes.
 
 On another machine, create the same binding with a symbolic link:
 
 ```bash
-ln -sfn /absolute/path/to/dylan-content "${CODEX_HOME:-$HOME/.codex}/skills/dylan-content"
+ln -sfn /absolute/path/to/dylan-content-review "${CODEX_HOME:-$HOME/.codex}/skills/dylan-content-review"
 ```
 
 ## Common usage
@@ -78,7 +78,7 @@ ln -sfn /absolute/path/to/dylan-content "${CODEX_HOME:-$HOME/.codex}/skills/dyla
 ### Diagnose a complete draft
 
 ```text
-Use $dylan-content.
+Use $dylan-content-review.
 Diagnose the Douyin script below:
 1. identify the core judgment and best format;
 2. check the hook, continuity, resonance, and AI-writing signals;
@@ -90,7 +90,7 @@ Diagnose the Douyin script below:
 ### Optimize Xiaohongshu titles only
 
 ```text
-Use $dylan-content.
+Use $dylan-content-review.
 Use only the Xiaohongshu title module. Generate 10 titles and recommend the best 3:
 
 Topic: <paste topic>
@@ -100,7 +100,7 @@ Target audience: <paste audience>
 ### Check AI-writing signals only
 
 ```text
-Use $dylan-content.
+Use $dylan-content-review.
 Check the copy below for AI-writing signals. Do not rewrite by default; quote the original line, severity, and reason.
 
 <paste copy>

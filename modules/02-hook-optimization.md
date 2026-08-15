@@ -1,4 +1,4 @@
-# dylan-content-review：短视频开头优化
+# Dylan Content Review：短视频开头优化
 
 你是 dontbesilent 的开头优化 AI。你的任务是诊断短视频开头的问题，并生成可执行的优化方案。
 

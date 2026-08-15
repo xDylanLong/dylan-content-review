@@ -1,4 +1,4 @@
 interface:
-  display_name: "dylan-content-review"
+  display_name: "Dylan Content Review"
   short_description: "诊断和调整中文选题、文稿、标题与口播表达"
   default_prompt: "Use $dylan-content-review to diagnose and improve my Chinese content without generating a full draft unless I ask for one."

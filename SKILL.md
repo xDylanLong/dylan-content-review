@@ -3,7 +3,7 @@ name: dylan-content-review
 description: Use when 用户要诊断、调整或复盘抖音、小红书及其他中文内容的选题、标题、长文、口播稿或文案，但没有要求从零生成完整成稿时。
 ---
 
-# dylan-content-review：内容诊断与调整工作台
+# Dylan Content Review：内容诊断与调整工作台
 
 ## 核心契约
 

@@ -23,20 +23,21 @@
 
 内容加工经常停留在“换一个标题”或“把句子写顺”，却没有回答更重要的问题：这条内容适合什么形式、观众为什么会继续看、观点之间是否真的连得起来，以及哪些表达只是看起来很完整。
 
-`dylan-content-review` 把这些判断拆成六个可按需调用的模块。它以用户提供的原句、事实和素材为证据，输出具体的删改位置、替代句、内容骨架或下一步动作，不承诺完播率、点击率或“必火”，也不默认从零生成完整成稿。
+`dylan-content-review` 把这些判断拆成七个可按需读取的模块。它以用户提供的原句、事实和素材为证据，输出具体的删改位置、替代句、内容骨架或下一步动作，不承诺完播率、点击率或“必火”，也不默认从零生成完整成稿。
 
-## 六个内容模块
+## 七个内容模块
 
 | 模块 | 适用任务 |
 | --- | --- |
-| `01-content-diagnosis` | 选题、内容形式、内容方向和完整文稿诊断 |
+| `01-content-diagnosis` | 选题定型、内容形式匹配、表达效率和认知落差 |
 | `02-hook-optimization` | 短视频开头、前 5 秒、前 10 秒和开场流失风险 |
 | `03-xhs-title-formulas` | 小红书标题公式匹配、生成和改写 |
 | `04-script-flow` | 逐字稿的逻辑延续、信息密度和口播流畅度 |
 | `05-resonance-diagnosis` | 受众共鸣、情绪入口、立场和传播机制 |
 | `06-ai-expression-check` | AI 写作特征检查，以及生成口播后的表达质检 |
+| `07-growth-behavior-check` | 点赞、评论、转发、关注的触发点和四项质量底线 |
 
-用户提供完整短视频稿时，默认组合 `01`、`02`、`04`、`05`、`06`；需要小红书版本时再加入 `03`。
+用户提供完整短视频稿时，默认组合 `01`、`02`、`04`、`05`、`06`、`07`；需要小红书版本时再加入 `03`。
 
 ## 怎么安装
 
@@ -65,7 +66,7 @@ Use $dylan-content-review 诊断这篇抖音口播稿，并给出可以直接修
 
 ### 本地开发绑定
 
-本项目的本地源目录是 `/Users/thawingx/Documents/dylan-content-review`。当前 Codex 运行时目录 `/Users/thawingx/.codex/skills/dylan-content-review` 与它分别维护，因此修改后需要同步更新运行时目录。
+本项目源目录和 Codex 运行时目录分别维护。修改源仓库后，需要把已跟踪的 Skill 文件同步到 `${CODEX_HOME:-$HOME/.codex}/skills/dylan-content-review`，同时保留运行时目录中的本地额外文件。
 
 其他机器可以用符号链接建立同样的绑定：
 
@@ -122,7 +123,8 @@ Use $dylan-content-review。
     ├── 03-xhs-title-formulas.md
     ├── 04-script-flow.md
     ├── 05-resonance-diagnosis.md
-    └── 06-ai-expression-check.md
+    ├── 06-ai-expression-check.md
+    └── 07-growth-behavior-check.md
 ```
 
 ## 使用边界

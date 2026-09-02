@@ -23,20 +23,21 @@
 
 Content editing often stops at “try another title” or “make the sentences smoother.” It still leaves the important questions unanswered: which format fits the material, why the audience should keep watching, whether the ideas actually connect, and which parts only look complete because they sound machine-written.
 
-`dylan-content-review` breaks those decisions into six focused modules. It uses the user’s original wording, facts, and materials as evidence, then returns concrete edit locations, replacement lines, content structures, or next actions. It does not promise completion rate, click-through rate, distribution, or virality, and it does not generate a full draft unless requested.
+`dylan-content-review` breaks those decisions into seven focused modules. It uses the user’s original wording, facts, and materials as evidence, then returns concrete edit locations, replacement lines, content structures, or next actions. It does not promise completion rate, click-through rate, distribution, or virality, and it does not generate a full draft unless requested.
 
-## Six content modules
+## Seven content modules
 
 | Module | Use it for |
 | --- | --- |
-| `01-content-diagnosis` | Topic, format, content direction, and full-draft diagnosis |
+| `01-content-diagnosis` | Topic scoping, format matching, expression efficiency, and cognitive gap |
 | `02-hook-optimization` | Short-video hooks, the first 5–10 seconds, and opening drop-off risks |
 | `03-xhs-title-formulas` | Xiaohongshu title formula matching, generation, and rewriting |
 | `04-script-flow` | Script continuity, information density, and spoken fluency |
 | `05-resonance-diagnosis` | Audience resonance, emotional entry points, stance, and sharing mechanisms |
 | `06-ai-expression-check` | AI-writing signals and post-generation spoken-expression QA |
+| `07-growth-behavior-check` | Like, comment, repost, and follow triggers plus four quality baselines |
 
-For a complete short-video script, the default combination is `01`, `02`, `04`, `05`, and `06`. Add `03` when a Xiaohongshu version is needed.
+For a complete short-video script, the default combination is `01`, `02`, `04`, `05`, `06`, and `07`. Add `03` when a Xiaohongshu version is needed.
 
 ## Installation
 
@@ -65,7 +66,7 @@ Use $dylan-content-review to diagnose this Douyin short-video script and give me
 
 ### Local development binding
 
-The local source directory for this project is `/Users/thawingx/Documents/dylan-content-review`. The current Codex runtime directory, `/Users/thawingx/.codex/skills/dylan-content-review`, is maintained separately and must be synchronized after source changes.
+The source checkout and the Codex runtime directory are maintained separately. After changing the source repository, synchronize its tracked Skill files into `${CODEX_HOME:-$HOME/.codex}/skills/dylan-content-review` while preserving runtime-local extra files.
 
 On another machine, create the same binding with a symbolic link:
 
@@ -122,7 +123,8 @@ Check the copy below for AI-writing signals. Do not rewrite by default; quote th
     ├── 03-xhs-title-formulas.md
     ├── 04-script-flow.md
     ├── 05-resonance-diagnosis.md
-    └── 06-ai-expression-check.md
+    ├── 06-ai-expression-check.md
+    └── 07-growth-behavior-check.md
 ```
 
 ## Boundaries
